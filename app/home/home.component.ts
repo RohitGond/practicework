@@ -71,15 +71,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 this.dataSource.data = this.first(TREE_DATA);
   }
-first(value : any){
-if(!value){
-  console.log('json file is empty');
-  return value;
-}else{
-  console.log(value);
+// first(value : any){
+// if(!value){
+//   console.log('json file is empty');
+//   return value;
+// }else{
+//   console.log(value);
   
-}
-}
+// }
+// }
 //////////////////////////first case//////////
 // first(value : any){
 // if(value.length === 1){
@@ -103,38 +103,19 @@ if(!value){
 // }
 
 //////////////////third case///////////
-// first(value : any){
-//   for(let eachvalue of value){
-// if(value.children){
-//   console.log('json file is nested');
-//   return value;
-// }else{
-//   console.log(value);
+first(value : any){
+  for(let eachvalue of value){
+if(eachvalue.children){
+  console.log('json file is nested');
+  return value;
+}else{
+  console.log(value);
   
-// }
-// }
+}
+}
 
-// }
-////////////////////fourth case//////////////////
-// first(value : any){
-// if(!value){
-//   console.log('json file is empty');
-//   return value;
-// }else{
-//   console.log(value);
-  
-// }
-// }
-///////////////////fifth case///////////////
-// first(value : any){
-// if(!value){
-//   console.log('json file is empty');
-//   return value;
-// }else{
-//   console.log(value);
-  
-// }
-// }
+}
+
 }
 
 

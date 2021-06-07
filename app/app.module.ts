@@ -14,7 +14,8 @@ import { Component3Component } from './component3/component3.component';
 import { Component4Component } from './component4/component4.component';
 import { Component5Component } from './component5/component5.component';
 import { ShowComponent } from './show/show.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTreeModule,
+    HttpClientModule,
+    MatIconModule,
     MatTabsModule,
-
-       MatIconModule
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

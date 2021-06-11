@@ -1,10 +1,10 @@
+import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef,Type} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import { Component1Component } from '../component1/component1.component';
 import { Component2Component } from '../component2/component2.component';
 import { Component3Component } from '../component3/component3.component';
 import { Component4Component } from '../component4/component4.component';
-import { Component5Component } from '../component5/component5.component';
+import { Component5Component } from '../component5/component5.component';  
 
 
 @Component({
@@ -12,6 +12,7 @@ import { Component5Component } from '../component5/component5.component';
   templateUrl: './show.component.html',
   styleUrls: ['./show.component.css']
 })
+
 export class ShowComponent implements OnInit {
   json:any=[];
   componentRef: any;
@@ -29,7 +30,8 @@ export class ShowComponent implements OnInit {
 
   createComponent(process: string) {
     this.entry.clear();
-    if (process=='1') {
+    if (process=='process1') {
+      
    this.component1();
       this.component2();
       this.component3();
@@ -37,7 +39,7 @@ export class ShowComponent implements OnInit {
       this.component5();
       
     } 
-    else if (process =='2') {
+    else if (process =='process2') {
       this.component1();
       this.component2();
       this.component3();
@@ -45,16 +47,16 @@ export class ShowComponent implements OnInit {
       
     }
   
-    else if (process == '3') {
+    else if (process == 'process3') {
       this.component1();
       this.component2();
       this.component3();
     }
-    else if (process == '4') {
+    else if (process == 'process4') {
       this.component1();
       this.component2();
     } 
-    else if (process == '5') {
+    else if (process == 'process5') {
       this.component1();
     }
   

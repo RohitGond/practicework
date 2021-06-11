@@ -1,24 +1,24 @@
 <div>
-    <mat-tab-group mat-align-tabs="start" >
-     <mat-tab label="Process1">
-        <button class=" btn btn-primary pr-3px"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">Button{{i+1}}</button>
+    <mat-tab-group mat-align-tabs="start"  class="bg">
+     <mat-tab label="{{obj.process}}"  *ngFor="let obj of json let i=index">
+        <button class=" btn btn-primary pr-3px" *ngFor = "let each of obj.components"  (click)="  selectComponent(obj.process)" >{{obj.process}}</button>
          </mat-tab>
  
-     <mat-tab label="Process2">
-             <button class="btn btn-primary pr-3px"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">Button{{i+1}}</button>
-             <p ></p>
+     <!-- <mat-tab label="Process2">
+             <button class="btn btn-primary pr-3px"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index" >{{obj.process}}</button>
+            
               </mat-tab>
  
      <mat-tab label="Process3">
-                 <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">Button{{i+1}}</button>
+                 <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">{{obj.process}}</button>
                   </mat-tab>
              
          <mat-tab label="Process4">
-                     <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">Button{{i+1}}</button>
+                     <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">{{obj.process}}</button>
                       </mat-tab>
  
          <mat-tab label="Process5">
-             <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">Button{{i+1}}</button></mat-tab>
+             <button class="btn btn-primary"  (click)="  selectComponent(obj.process)" *ngFor="let obj of json let i=index">{{obj.process}}</button></mat-tab> -->
      </mat-tab-group>
   
  </div>

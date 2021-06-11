@@ -42,6 +42,11 @@ import { MatTabsModule} from '@angular/material/tabs';
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [    Component1Component,
+    Component2Component,
+    Component3Component,
+    Component4Component,
+    Component5Component,]
 })
 export class AppModule { }
